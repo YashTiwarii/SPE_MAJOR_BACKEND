@@ -2,7 +2,7 @@ import express from "express";
 import jwt from 'jsonwebtoken'
 import bcrypt from 'bcrypt'
 import { UserModel } from "../models/Users.js";
-
+import logger from "../../logs.js";
 const router = express.Router();
 
 router.post("/register",async(req , res) => {
@@ -15,6 +15,8 @@ router.post("/register",async(req , res) => {
     const hashedPassword = await bcrypt.hash(password, 10);
 
     const newUser= new UserModel({username,password: hashedPassword});
+    //logger
+    logger.info('User added: ${JSON.stringify(newUser)}')
     await newUser.save();
 
     res.json({ message: "User Registered Successfully!"});
@@ -39,6 +41,8 @@ router.post("/login" , async (req , res) => {
     }
 
     const token =jwt.sign({id: user._id}, "secret");
+    //logger
+    logger.info('User logged in :',user._id)
     res.json({token, userID : user._id});
 });
 
