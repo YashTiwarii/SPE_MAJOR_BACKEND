@@ -2,12 +2,16 @@ import express from "express";
 import {WorkoutsModel} from "../models/Workouts.js";
 import {UserModel} from "../models/Users.js";
 import { verifyToken } from "./users.js";
+import logger from "../../logs.js";
 const router = express.Router();
+
 
 
 router.get("/",async(req,res) => {
     try {
         const response = await WorkoutsModel.find({});
+        //logger
+        logger.info("all workouts returned");
         res.json(response);
     } catch (error) {
         res.json(error);
@@ -18,6 +22,8 @@ router.post("/",verifyToken,async(req,res) => {
     const workout = new WorkoutsModel(req.body);
     console.log(workout);
     try {
+        //logger
+        logger.info('new workout added');
         const response = await workout.save();
         res.json(response);
     } catch (error) {
@@ -28,6 +34,8 @@ router.post("/",verifyToken,async(req,res) => {
 router.get("/get-workout/:workoutID" ,async(req,res) => {
 try {
     const workout = await WorkoutsModel.findById(req.params.workoutID);
+    //logger
+    logger.info('Workout returned:' ,req.params.workoutID);
     // console.log(workout);
     res.json(workout);
 } catch (err) {
@@ -41,6 +49,8 @@ router.put("/",verifyToken,async(req,res) => {
     const user = await UserModel.findById(req.body.userID)
     
         user.savedWorkouts.push(workout);
+        //logger
+        logger.info(`workout (${workout._id}) saved for user: `, user._id)
         await user.save();
         res.status(201).json({savedWorkouts: user.savedWorkouts});
     } catch (error) {
@@ -61,6 +71,8 @@ router.delete("/",async(req,res) => {
             const savedWorkouts = await WorkoutsModel.find({
                 _id:{$in : user.savedWorkouts},
             });
+            //logger
+            logger.info('Workout deleted from the saved ')
             res.status(200).json({savedWorkouts});  
         }
         else{
@@ -75,6 +87,8 @@ router.delete("/",async(req,res) => {
 router.get("/savedWorkouts/ids/:userID" ,async(req,res) => {
     try {
         const user = await UserModel.findById(req.params.userID);
+        //logger
+        logger.info('Returned Saved Workout for user');
         res.json({savedWorkouts: user?.savedWorkouts});
     } catch (err) {
         console.log(err);
@@ -89,6 +103,8 @@ router.get("/savedWorkouts/:userID" ,async(req,res) => {
             _id:{$in: user.savedWorkouts},
         });
         console.log(savedWorkouts);
+        //logger
+        logger.info('Returned Saved Workout for user');
         res.status(201).json({savedWorkouts});
         
     } catch (error) {
@@ -98,7 +114,7 @@ router.get("/savedWorkouts/:userID" ,async(req,res) => {
 });
 
 //comment on workout
-router.put("/comment",async(req,res) => {
+router.put("/comment",verifyToken,async(req,res) => {
     const workout = await WorkoutsModel.findById(req.body.workoutID);
     const userObj = await UserModel.findById(req.body.userID);
     const comment = {
@@ -108,6 +124,8 @@ router.put("/comment",async(req,res) => {
     try {
         workout.comments.push(comment);
         await workout.save();
+        //logger
+        logger.info('Comment added for the Workout');
         res.status(201).json({workout : workout});
     } catch (err) {
         res.status(500).json(err);
@@ -115,7 +133,7 @@ router.put("/comment",async(req,res) => {
 
 });
 //rate a workout
-router.put("/rate",async (req,res) =>{
+router.put("/rate",verifyToken,async (req,res) =>{
 const workout = await WorkoutsModel.findById(req.body.workoutID);
 const userObj = await UserModel.findById(req.body.userID);
 const rating ={
@@ -125,6 +143,8 @@ const rating ={
 try {
     workout.ratings.push(rating);
     await workout.save();
+    //logger
+    logger.info('Rated the Workout');
     res.status(201).json({workout: workout});
 } catch (err) {
     res.status(500).json(err)

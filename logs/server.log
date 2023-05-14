@@ -1,1 +1,74 @@
-{"level":"info","message":"User logged in :","timestamp":"2023-05-12T06:42:05.291Z"}
+
+2023-05-14T13:27:50.611Z [INFO] all workouts returned
+2023-05-14T13:27:50.647Z [INFO] all workouts returned
+2023-05-14T13:28:05.072Z [INFO] User logged in :
+2023-05-14T13:28:05.421Z [INFO] all workouts returned
+2023-05-14T13:28:05.431Z [INFO] Returned Saved Workout for user
+2023-05-14T13:28:06.952Z [INFO] Returned Saved Workout for user
+2023-05-14T13:28:06.964Z [INFO] all workouts returned
+2023-05-14T13:28:09.615Z [INFO] Workout returned:
+2023-05-14T13:28:09.619Z [INFO] Workout returned:
+2023-05-14T13:28:13.093Z [INFO] Returned Saved Workout for user
+2023-05-14T13:28:13.095Z [INFO] Returned Saved Workout for user
+2023-05-14T13:28:13.101Z [INFO] all workouts returned
+2023-05-14T13:28:13.109Z [INFO] all workouts returned
+2023-05-14T13:28:16.374Z [INFO] workout (6440d5b81f31c49bd4ba5543) saved for user: 
+2023-05-14T13:28:18.436Z [INFO] Returned Saved Workout for user
+2023-05-14T13:28:18.453Z [INFO] Returned Saved Workout for user
+2023-05-14T13:28:22.926Z [INFO] Workout deleted from the saved 
+2023-05-14T13:29:42.903Z [INFO] all workouts returned
+2023-05-14T13:29:42.917Z [INFO] all workouts returned
+2023-05-14T13:29:42.923Z [INFO] Returned Saved Workout for user
+2023-05-14T13:29:42.929Z [INFO] Returned Saved Workout for user
+2023-05-14T13:29:55.675Z [INFO] User logged in :
+2023-05-14T13:29:56.109Z [INFO] Returned Saved Workout for user
+2023-05-14T13:29:56.119Z [INFO] all workouts returned
+2023-05-14T13:29:56.127Z [INFO] Returned Saved Workout for user
+2023-05-14T13:29:56.138Z [INFO] all workouts returned
+2023-05-14T13:30:08.792Z [INFO] Workout returned:
+2023-05-14T13:30:08.799Z [INFO] Workout returned:
+2023-05-14T13:30:19.802Z [INFO] Rated the Workout
+2023-05-14T13:30:22.259Z [INFO] Returned Saved Workout for user
+2023-05-14T13:30:22.262Z [INFO] all workouts returned
+2023-05-14T13:30:22.264Z [INFO] Returned Saved Workout for user
+2023-05-14T13:30:22.267Z [INFO] all workouts returned
+2023-05-14T13:34:41.620Z [INFO] all workouts returned
+2023-05-14T13:34:41.640Z [INFO] all workouts returned
+2023-05-14T13:34:41.648Z [INFO] Returned Saved Workout for user
+2023-05-14T13:34:41.652Z [INFO] Returned Saved Workout for user
+2023-05-14T13:34:51.278Z [INFO] Returned Saved Workout for user
+2023-05-14T13:34:51.287Z [INFO] Returned Saved Workout for user
+2023-05-14T13:34:54.863Z [INFO] Workout returned:
+2023-05-14T13:34:54.870Z [INFO] Workout returned:
+2023-05-14T13:35:19.434Z [INFO] all workouts returned
+2023-05-14T13:35:19.445Z [INFO] all workouts returned
+2023-05-14T13:48:08.444Z [INFO] all workouts returned
+2023-05-14T13:48:08.461Z [INFO] all workouts returned
+2023-05-14T13:48:11.793Z [INFO] Workout returned:
+2023-05-14T13:48:11.806Z [INFO] Workout returned:
+2023-05-14T13:49:46.206Z [INFO] all workouts returned
+2023-05-14T13:49:46.215Z [INFO] all workouts returned
+2023-05-14T13:49:48.249Z [INFO] Workout returned:
+2023-05-14T13:49:48.251Z [INFO] Workout returned:
+2023-05-14T13:49:49.170Z [INFO] Workout returned:
+2023-05-14T13:49:49.182Z [INFO] Workout returned:
+2023-05-14T13:50:06.995Z [INFO] all workouts returned
+2023-05-14T13:50:07.013Z [INFO] all workouts returned
+2023-05-14T13:50:11.389Z [INFO] Workout returned:
+2023-05-14T13:50:11.400Z [INFO] Workout returned:
+2023-05-14T13:50:59.410Z [INFO] Workout returned:
+2023-05-14T13:50:59.416Z [INFO] Workout returned:
+2023-05-14T14:24:35.054Z [INFO] all workouts returned
+2023-05-14T14:24:35.072Z [INFO] all workouts returned
+2023-05-14T14:25:13.007Z [INFO] User added: ${JSON.stringify(newUser)}
+2023-05-14T14:25:24.165Z [INFO] User logged in :
+2023-05-14T14:25:24.492Z [INFO] all workouts returned
+2023-05-14T14:25:24.500Z [INFO] Returned Saved Workout for user
+2023-05-14T14:25:26.257Z [INFO] all workouts returned
+2023-05-14T14:25:26.267Z [INFO] Returned Saved Workout for user
+2023-05-14T14:25:32.169Z [INFO] Returned Saved Workout for user
+2023-05-14T14:25:32.175Z [INFO] Returned Saved Workout for user
+2023-05-14T14:25:35.135Z [INFO] Returned Saved Workout for user
+2023-05-14T14:25:35.142Z [INFO] Returned Saved Workout for user
+2023-05-14T14:25:35.153Z [INFO] all workouts returned
+2023-05-14T14:25:35.164Z [INFO] all workouts returned
